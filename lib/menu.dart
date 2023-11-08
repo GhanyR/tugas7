@@ -3,6 +3,13 @@ import 'package:flutter/material.dart';
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
 
+  // Menambahkan daftar warna untuk tiap item
+  final List<Color> itemColors = [
+    Colors.red,     // Warna untuk "Lihat Produk"
+    Colors.green,   // Warna untuk "Tambah Produk"
+    Colors.blue,    // Warna untuk "Logout"
+  ];
+
   final List<ShopItem> items = [
     ShopItem("Lihat Produk", Icons.checklist),
     ShopItem("Tambah Produk", Icons.add_shopping_cart),
@@ -31,16 +38,24 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              GridView.count(
+              // Menggunakan GridView.builder agar kita bisa mengakses index
+              GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                ),
                 primary: true,
                 padding: const EdgeInsets.all(20),
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                crossAxisCount: 3,
                 shrinkWrap: true,
-                children: items.map((ShopItem item) {
-                  return ShopCard(item);
-                }).toList(),
+                itemCount: items.length,
+                itemBuilder: (context, index) {
+                  // Mengambil warna dari daftar warna berdasarkan index
+                  return ShopCard(
+                    items[index],
+                    color: itemColors[index], // Menambahkan parameter warna
+                  );
+                },
               ),
             ],
           ),
@@ -59,13 +74,15 @@ class ShopItem {
 
 class ShopCard extends StatelessWidget {
   final ShopItem item;
+  final Color color; // Menambahkan field color
 
-  const ShopCard(this.item, {Key? key}) : super(key: key);
+  // Menambahkan parameter color pada constructor
+  const ShopCard(this.item, {required this.color, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.indigo,
+      color: color, // Menggunakan field color
       child: InkWell(
         onTap: () {
           ScaffoldMessenger.of(context)
