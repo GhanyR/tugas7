@@ -1,4 +1,3 @@
-```markdown
 # Tugas 7: Elemen Dasar Flutter
 ## Pemrograman Berbasis Platform (CSGE602022) - Semester Ganjil 2023/2024
 ### Fakultas Ilmu Komputer Universitas Indonesia
@@ -79,5 +78,3 @@ Tenggat waktu pengerjaan Tugas 7 adalah Rabu, 8 November 2023, pukul 12.00 siang
 
 ### Akun GitHub
 [GitHub Ghany Rasyid Prawira](https://github.com/GhanyR/tugas7)
-
-```
