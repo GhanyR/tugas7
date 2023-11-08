@@ -1,8 +1,7 @@
-# Tugas 7: Elemen Dasar Flutter
-## Pemrograman Berbasis Platform (CSGE602022) - Semester Ganjil 2023/2024
-### Fakultas Ilmu Komputer Universitas Indonesia
-#### Ghany Rasyid Prawira - NPM: 2206082392 - Kelas: PBP C
+# Pemrograman Berbasis Platform (CSGE602022) - Semester Ganjil 2023/2024
+# Ghany Rasyid Prawira - NPM: 2206082392 - Kelas: PBP C
 
+## Tugas 7: Elemen Dasar Flutter
 ---
 
 ## Deskripsi Tugas
