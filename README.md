@@ -77,3 +77,64 @@ Tenggat waktu pengerjaan Tugas 7 adalah Rabu, 8 November 2023, pukul 12.00 siang
 
 ### Akun GitHub
 [GitHub Ghany Rasyid Prawira](https://github.com/GhanyR/tugas7)
+
+----
+
+## Tugas 8: Flutter Navigation, Layouts, Forms, and Input Elements
+---
+
+## Deskripsi Tugas
+Pada tugas ini, implementasi navigation, layout, form, dan elemen input form pada aplikasi Flutter yang telah dikembangkan di Tugas sebelumnya.
+
+## Checklist Tugas
+- [x] Membuat minimal satu halaman baru, yaitu halaman formulir tambah item baru.
+- [x] Menggunakan minimal tiga elemen input di halaman formulir: name, amount, description.
+- [x] Memiliki tombol Save pada halaman formulir.
+- [x] Setiap elemen input di formulir divalidasi: tidak boleh kosong serta harus sesuai tipe data model yang sesuai.
+- [x] Mengarahkan pengguna ke halaman form tambah item baru saat tombol Tambah Item ditekan.
+- [x] Memunculkan pop-up yang menampilkan data yang diisi setelah tombol Save ditekan.
+- [x] Membuat drawer di aplikasi dengan dua opsi: Halaman Utama dan Tambah Item.
+- [x] Mengarahkan pengguna ke halaman yang sesuai saat opsi di drawer dipilih.
+
+## Bonus
+- [x] Membuat halaman daftar item.
+- [x] Mengarahkan pengguna ke halaman daftar item jika tombol Lihat Produk ditekan.
+
+## Pertanyaan
+1. **Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh penggunaan yang tepat!**
+
+   Navigator.push() digunakan untuk mengarahkan pengguna ke halaman baru tanpa menghapus halaman sebelumnya dari stack navigasi. Ini berguna saat kamu ingin memungkinkan pengguna kembali ke halaman sebelumnya.
+
+   Contoh: Ketika pengguna menekan tombol Tambah Item, Navigator.push() digunakan untuk membawa pengguna ke halaman formulir tambah item baru tanpa menghilangkan halaman utama dari stack.
+
+   Navigator.pushReplacement() digunakan untuk mengganti halaman saat ini dengan halaman baru pada stack navigasi. Halaman saat ini dihilangkan dan tidak dapat dikunjungi kembali dengan tombol kembali.
+
+   Contoh: Setelah pengguna berhasil login, Navigator.pushReplacement() dapat digunakan untuk membawa pengguna ke dashboard utama dan menggantikan layar login sehingga pengguna tidak dapat kembali ke layar login dengan tombol kembali.
+
+2. **Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!**
+
+   - `Container`: Digunakan untuk membuat kotak dengan padding, margin, border, dan latar belakang yang dapat disesuaikan. Baik untuk layout single child.
+   - `Column` dan `Row`: Digunakan untuk menata widget secara vertikal dan horizontal. Cocok untuk layout linear sederhana.
+   - `Stack`: Memungkinkan widget ditumpuk di atas satu sama lain. Baik untuk overlay atau posisi elemen yang tidak teratur.
+   - `GridView`: Menata widget dalam bentuk grid yang bisa scroll. Digunakan untuk menampilkan banyak data seperti galeri gambar.
+
+3. **Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!**
+
+   - `TextField`: Digunakan untuk input teks seperti nama dan deskripsi karena memungkinkan input string bebas.
+   - `NumberInputFormField`: Digunakan untuk amount, karena mempersempit input ke angka saja.
+   - `DropdownButtonFormField`: Dapat digunakan untuk pilihan kategori jika diperlukan, memberikan daftar pilihan terbatas pada pengguna.
+
+4. **Bagaimana penerapan clean architecture pada aplikasi Flutter?**
+
+   Clean architecture pada Flutter bisa diterapkan dengan memisahkan kode menjadi lapisan yang jelas: Presentation layer (UI), Business Logic layer (BLoC atau ViewModel), dan Data layer (Repository dan Data Sources). Penerapannya memungkinkan untuk menguji dan mengelola kode dengan lebih mudah.
+
+5. **Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step!**
+
+   1. Membuat halaman baru `NewItemForm` dengan `Scaffold` dan `Form`.
+   2. Menambahkan `TextFormField` untuk setiap elemen input yang diperlukan pada `Form`.
+   3. Menambahkan pengaturan validasi untuk setiap `TextFormField`.
+   4. Membuat fungsi `onSaved` pada `Form` untuk menampilkan pop-up dengan data.
+   5. Menggunakan `Navigator.push` untuk navigasi ke halaman `NewItemForm` dari halaman utama dan drawer.
+   6. Mengimplementasikan drawer dengan `ListView` dan `ListTile`.
+   7. Membuat halaman daftar item `ItemListPage` untuk menampilkan produk yang telah ditambahkan.
+   8. Add-commit-push kode ke GitHub.
