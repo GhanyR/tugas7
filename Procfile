@@ -1,0 +1,1 @@
+web: gunicorn tugas2.wsgi

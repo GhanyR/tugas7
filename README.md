@@ -8,7 +8,7 @@
 Pada tugas ini, kamu akan mengimplementasikan aplikasi yang telah kamu kembangkan menggunakan Flutter berdasarkan beberapa hal yang sudah kamu pelajari selama tutorial.
 
 ## Checklist Tugas
-- [x] Membuat sebuah program Flutter baru dengan tema inventory seperti tugas-tugas sebelumnya.
+- [x] Membuat sebuah program Flutter baru dengan tema PlantPedia seperti tugas-tugas sebelumnya.
 - [x] Membuat tiga tombol sederhana dengan ikon dan teks untuk:
     - [x] Melihat daftar item ("Lihat Item")
     - [x] Menambah item ("Tambah Item")
@@ -67,7 +67,7 @@ Tenggat waktu pengerjaan Tugas 7 adalah Rabu, 8 November 2023, pukul 12.00 siang
 ----
 
 ### Step-by-step Implementasi
-1. Menjalankan perintah `flutter create my_inventory_app` untuk membuat proyek baru.
+1. Menjalankan perintah `flutter create tugas7` untuk membuat proyek baru.
 2. Menambahkan `ShopItem` dan `ShopCard` ke dalam project untuk mengelola tampilan item dan interaksi tombol.
 3. Melakukan implementasi Snackbar dengan `ScaffoldMessenger` di dalam fungsi `onTap` pada `InkWell`.
 4. Menyesuaikan warna setiap tombol dengan menerapkan `color` pada `Material` widget.
