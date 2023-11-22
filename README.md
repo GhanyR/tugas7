@@ -138,3 +138,79 @@ Pada tugas ini, implementasi navigation, layout, form, dan elemen input form pad
    6. Mengimplementasikan drawer dengan `ListView` dan `ListTile`.
    7. Membuat halaman daftar item `ItemListPage` untuk menampilkan produk yang telah ditambahkan.
    8. Add-commit-push kode ke GitHub.
+
+
+
+
+Untuk membuat README.md untuk Tugas 9 yang berjudul "Integrasi Layanan Web Django dengan Aplikasi Flutter", kita akan mengikuti format yang Anda berikan sebagai contoh dan menyesuaikan konten sesuai dengan deskripsi tugas yang Anda sebutkan. Karena saya tidak dapat mengakses isi dari kode yang Anda lampirkan, saya akan membuat konten README berdasarkan informasi yang Anda berikan dan beberapa asumsi umum tentang proyek Django dan Flutter.
+
+---
+
+## Tugas 9: Integrasi Layanan Web Django dengan Aplikasi Flutter
+---
+
+## Deskripsi Tugas
+Pada tugas ini, tujuannya adalah mengintegrasikan layanan web Django yang telah dikembangkan pada tugas-tugas sebelumnya dengan aplikasi Flutter. Hal ini melibatkan penggunaan sistem autentikasi Django dan menampilkan data dari Django di aplikasi Flutter.
+
+## Checklist Tugas
+- [x] Memastikan deployment proyek Django berjalan dengan baik.
+- [x] Membuat halaman login pada aplikasi Flutter.
+- [x] Mengintegrasikan sistem autentikasi Django dengan aplikasi Flutter.
+- [x] Membuat model kustom sesuai dengan proyek aplikasi Django.
+- [x] Membuat halaman yang menampilkan daftar item dari endpoint JSON Django.
+- [x] Membuat halaman detail untuk setiap item.
+- [x] Tambahkan tombol kembali ke halaman daftar item.
+
+## Tenggat Waktu Pengerjaan
+Tenggat waktu pengerjaan Tugas 9 adalah Rabu, 22 November 2023, pukul 12.00 siang.
+
+## Pertanyaan
+1. **Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?**
+
+   Ya, kita bisa melakukan pengambilan data JSON tanpa membuat model terlebih dahulu di Flutter. Namun, membuat model terlebih dahulu lebih baik karena memberikan struktur yang jelas dan memudahkan pengelolaan data, validasi, dan manipulasi di aplikasi.
+
+2. **Jelaskan fungsi dari CookieRequest dan mengapa perlu dibagikan ke semua komponen di aplikasi Flutter.**
+
+   CookieRequest digunakan untuk mengelola cookies dalam request HTTP, terutama untuk autentikasi. Memiliki satu instance yang dibagikan ke semua komponen penting untuk mempertahankan sesi pengguna dan mengelola autentikasi secara konsisten di seluruh aplikasi.
+
+3. **Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.**
+
+   Data diambil dari Django menggunakan HTTP request yang mengembalikan response dalam format JSON. Flutter kemudian mengurai JSON ini dan mengonversinya menjadi objek Dart menggunakan model. Objek ini kemudian digunakan untuk menampilkan data di UI.
+
+4. **Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.**
+
+   User memasukkan data login di Flutter, yang kemudian dikirimkan ke Django melalui HTTP request. Django memvalidasi kredensial dan mengembalikan token autentikasi jika valid. Token ini digunakan untuk autentikasi request berikutnya dari Flutter.
+
+5. **Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.**
+
+   - `MaterialApp`: Menyediakan widget utama untuk aplikasi Flutter.
+   - `Scaffold`: Menyediakan struktur dasar untuk layout.
+   - `TextField`: Widget untuk input teks.
+   - `ListView`: Menampilkan data dalam format daftar.
+   - `Card`: Menampilkan item dalam bentuk kartu yang menarik.
+   - `FlatButton`: Tombol sederhana untuk interaksi.
+   - Lainnya: Widget lain yang digunakan untuk navigasi, layout, dan interaksi.
+
+6. **Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step.**
+
+   1. Memastikan Django app di-deploy dengan baik dan endpoint API berfungsi.
+   2. Membangun halaman
+
+   3. login di Flutter dengan `TextField` untuk input.
+   3. Menggunakan HTTP request untuk mengirim data login ke Django dan menerima token.
+   4. Membuat model Dart untuk mewakili data dari Django.
+   5. Menggunakan HTTP request untuk mendapatkan data item dari Django dan menampilkan di Flutter.
+   6. Membuat halaman detail dengan informasi lengkap item ketika item di-tap.
+   7. Menambahkan fungsi navigasi kembali ke daftar item.
+
+## Bonus
+- [X] Mengimplementasikan fitur registrasi akun.
+- [X] Melakukan filter item berdasarkan pengguna yang login.
+
+## Akun GitHub
+[GitHub Ghany Rasyid Prawira](https://github.com/GhanyR/Tugas9)
+[Link Deploy Django](https://ghany-rasyid-tugas.pbp.cs.ui.ac.id/)
+
+---
+
+Catatan: Pastikan untuk melakukan finalisasi dan penyesuaian pada file README.md sesuai dengan detail spesifik proyek Anda, termasuk link GitHub yang benar, dan mengecek semua item di checklist. Jika ada langkah spesifik atau detail yang perlu ditambahkan berdasarkan kode Anda, pastikan untuk menyertakannya juga.
