@@ -39,7 +39,7 @@ class Fields {
   int amount;
   String description;
   int price;
-  int power;
+  int familly;
   String category;
   int user;
 
@@ -48,7 +48,7 @@ class Fields {
     required this.amount,
     required this.description,
     required this.price,
-    required this.power,
+    required this.familly,
     required this.category,
     required this.user,
   });
@@ -58,7 +58,7 @@ class Fields {
         amount: json["amount"],
         description: json["description"],
         price: json["price"],
-        power: json["power"],
+        familly: json["familly"],
         category: json["category"],
         user: json["user"],
       );
@@ -68,7 +68,7 @@ class Fields {
         "amount": amount,
         "description": description,
         "price": price,
-        "power": power,
+        "familly": familly,
         "category": category,
         "user": user,
       };

@@ -17,7 +17,7 @@ class _ItemFormPageState extends State<ItemFormPage> {
   String _name = "";
   String _category = "";
   int _amount = 0;
-  int _power = 0;
+  int _familly = 0;
   int _price = 0;
   String _description = "";
 
@@ -130,23 +130,23 @@ class _ItemFormPageState extends State<ItemFormPage> {
               padding: const EdgeInsets.all(8.0),
               child: TextFormField(
                 decoration: InputDecoration(
-                  hintText: "Power",
-                  labelText: "Power",
+                  hintText: "Families",
+                  labelText: "Families",
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(5.0),
                   ),
                 ),
                 onChanged: (String? value) {
                   setState(() {
-                    _power = int.parse(value!);
+                    _familly = int.parse(value!);
                   });
                 },
                 validator: (String? value) {
                   if (value == null || value.isEmpty) {
-                    return "Power cannot be empty!";
+                    return "Families cannot be empty!";
                   }
                   if (int.tryParse(value) == null) {
-                    return "Power must be a valid integer!";
+                    return "Families must be a valid integer!";
                   }
                   return null;
                 },
@@ -226,7 +226,7 @@ class _ItemFormPageState extends State<ItemFormPage> {
                             'name': _name,
                             'category': _category,
                             'amount': _amount.toString(),
-                            'power': _power.toString(),
+                            'familly': _familly.toString(),
                             'price': _price.toString(),
                             'description': _description,
                           }));

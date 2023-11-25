@@ -31,7 +31,7 @@ class DetailItemPage extends StatelessWidget {
             const SizedBox(height: 10),
             Text("Amount : ${item.fields.amount}"),
             const SizedBox(height: 10),
-            Text("Power : ${item.fields.power}"),
+            Text("Families : ${item.fields.familly}"),
             const SizedBox(height: 10),
             Text("Price : ${item.fields.price}"),
             const SizedBox(height: 10),
